@@ -16,7 +16,11 @@ def greet_crew (crew)
 end
 
 def engage
+  #binding.pry
   date = generate_star_date
-  state_log(date)
-  greet_crew(crew)
+  greet = greet_crew(crew)
+  a = greet.map do |n|
+    "Hello #{n}."
+  end
+  return a
 end
